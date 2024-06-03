@@ -1,22 +1,37 @@
-# Lightweight
-# Onion
-# Router
-## http proxychain structure.
+# Lightweight Onion Router
+
+## Overview
+
+Lightweight Onion Router (LOR) is a minimalistic proxychain structure that enhances privacy and security by routing your HTTP traffic through multiple proxy servers. This project is built using Go and provides a straightforward setup to get you started.
 
 ## Setup
 
-1. Download go.
+### Step 1: Install Go
 
-2. Clone this repo.
+Ensure you have Go installed on your machine. You can download it from the official [Go website](https://golang.org/dl/).
 
-3. Open source code and config lor servers ip:port.
+### Step 2: Clone the Repository
 
-Default ip:ports:
-* lor-0					ip:127.0.0.10 		host:port:1400		proxyport:1401
-* lor-1					ip:127.0.0.20 		host:port:1400		proxyport:1401
-* lor-2					ip:127.0.0.30 		host:port:1400		proxyport:1401
+Clone this repository to your local machine:
 
-4. Compile 
+```bash
+git clone https://github.com/Menesay/LOR.git
+cd LOR
+```
+
+### Step 3: Configure Server IPs and Ports
+
+Open the source code and configure the IP addresses and ports for the LOR servers. The default configuration is as follows:
+
+| Server | IP Address    | Host Port | Proxy Port |
+|--------|---------------|-----------|------------|
+| lor-0  | 127.0.0.10    | 1400      | 1401       |
+| lor-1  | 127.0.0.20    | 1400      | 1401       |
+| lor-2  | 127.0.0.30    | 1400      | 1401       |
+
+### Step 4: Compile the Code
+
+Compile the source code for each server using the following commands:
 
 ```bash
 go build lor-0.go
@@ -24,20 +39,58 @@ go build lor-1.go
 go build lor-2.go
 ```
 
+## Running the Servers
 
-## Run
+### Step 1: Start the Servers in Sequence
 
-1. first run lor-2, second lor-1, third lor-0 because of the network structure
+Due to the network structure, the servers must be started in reverse order:
 
-2. connect to lor-0
+1. First, run `lor-2`:
+    ```bash
+    ./lor-2
+    ```
 
-```bash
-nc 127.0.0.10 1400
-menesay.duckdns.org
-80
-```
-Connect to the lor-0
-1. send hostname
-2. send port
+2. Then, run `lor-1`:
+    ```bash
+    ./lor-1
+    ```
 
-Wait for a while and the http proxy will running at 127.0.0.10:1401
+3. Finally, run `lor-0`:
+    ```bash
+    ./lor-0
+    ```
+
+### Step 2: Connect to LOR
+
+To connect to the LOR network, follow these steps:
+
+1. Open a terminal and use `nc` (netcat) to connect to `lor-0`:
+    ```bash
+    nc 127.0.0.10 1400
+    ```
+
+2. Send the hostname:
+    ```bash
+    menesay.duckdns.org
+    ```
+
+3. Send the port number:
+    ```bash
+    80
+    ```
+
+Wait for a moment, and the HTTP proxy will be running at `127.0.0.10:1401`.
+
+## Additional Information
+
+- Make sure your firewall settings allow connections on the specified IP addresses and ports.
+- The order of operations is crucial for the proxychain to function correctly.
+- For any issues or contributions, feel free to open a pull request or raise an issue on the GitHub repository.
+
+Enjoy with Lightweight Onion Router!
+
+---
+
+Feel free to reach out if you have any questions or need further assistance.
+
+Happy browsing! 🚀
