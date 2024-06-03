@@ -1,26 +1,7 @@
-
-# ▓▓         ▓▓▓▓▓▓    ▓▓▓▓▓▓▓
-# ▓▓        ▓▓    ▓▓   ▓▓    ▓▓
-# ▓▓        ▓▓    ▓▓   ▓▓    ▓▓
-# ▓▓        ▓▓    ▓▓   ▓▓▓▓▓▓▓
-# ▓▓        ▓▓    ▓▓   ▓▓    ▓▓
-# ▓▓        ▓▓    ▓▓   ▓▓    ▓▓
-# ▓▓▓▓▓▓▓▓   ▓▓▓▓▓▓    ▓▓    ▓▓
-
 # Lightweight
 # Onion
 # Router
-
-
 ## http proxychain structure.
-
-
-# Doc
-
-## Structure
-
-
-
 
 ## Setup
 
@@ -46,8 +27,7 @@ go build lor-2.go
 
 ## Run
 
-1. first run lor-2, second lor-1, third lor-0
-cuz of network structure
+1. first run lor-2, second lor-1, third lor-0 because of the network structure
 
 2. connect to lor-0
 
@@ -60,4 +40,4 @@ Connect to the lor-0
 1. send hostname
 2. send port
 
-wait for a while and the http proxy will running at 127.0.0.10:1401
+Wait for a while and the http proxy will running at 127.0.0.10:1401
