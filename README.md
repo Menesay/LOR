@@ -1,8 +1,10 @@
 # Lightweight Onion Router
 
+![demo](/LOR/demo.png "Demo")
+
 ## Overview
 
-Lightweight Onion Router (LOR) is a minimalistic proxychain structure that enhances privacy and security by routing your HTTP traffic through multiple proxy servers. This project is built using Go and provides a straightforward setup to get you started.
+Lightweight Onion Router (LOR) is a minimalist proxy chain structure that routes your HTTP traffic through multiple proxy servers. This project was built using Go and provides a simple setup to get you started.
 
 ## Setup
 
