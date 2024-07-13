@@ -1,5 +1,6 @@
 # Lightweight Onion Router
 
+![logo](/LOR/LOR-logo.png "Logo")
 ![demo](/LOR/demo.png "Demo")
 
 ## Overview
